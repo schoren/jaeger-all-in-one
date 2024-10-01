@@ -39,6 +39,10 @@ spec:
       protocol: TCP
       name: http-otlp
     {{- end }}
+    - port: 16685
+      targetPort: grpc-query
+      protocol: TCP
+      name: grpc-query
     - port: {{ .Values.service.port }}
       targetPort: http-ui
       protocol: TCP

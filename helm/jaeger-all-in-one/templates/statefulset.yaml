@@ -61,7 +61,10 @@ spec:
             - name: http-otlp
               containerPort: 4318
               protocol: TCP
-            {{- end }}  
+            {{- end }}
+            - name: grpc-query
+              containerPort: 16685
+              protocol: TCP
             - name: http-ui
               containerPort: 16686
               protocol: TCP
